@@ -10,7 +10,7 @@ feature 'restaurants' do
     end
   end
 
-  context 'Users can go to add restaurant page' do
+  context 'Users can add a restaurant ' do
     scenario 'User clicks link to add a restaurant' do
       visit '/restaurants'
       expect(page).to have_content 'No restaurants yet'
@@ -18,9 +18,6 @@ feature 'restaurants' do
       expect(page.current_path).to eq "/restaurants/new"
       expect(page).to have_content "Add a new restaurant"
     end
-  end
-
-  context 'Users can add a restaurant' do
     scenario 'user fills in form and sumbits' do
       visit '/restaurants/new'
       fill_in('name', :with => 'American Diner')
@@ -28,4 +25,3 @@ feature 'restaurants' do
       click_on('Add Restaurant')
     end
   end
-end
