@@ -1,0 +1,10 @@
+  [1m[35m (125.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "yelp_clone_test"[0m
+  [1m[35m (403.4ms)[0m  [1m[35mCREATE DATABASE "yelp_clone_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurants" for 127.0.0.1 at 2016-07-11 22:16:01 +0100
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (130.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "yelp_clone_test"[0m
+  [1m[35m (610.5ms)[0m  [1m[35mCREATE DATABASE "yelp_clone_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/restaurants" for 127.0.0.1 at 2016-07-11 22:20:19 +0100
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
