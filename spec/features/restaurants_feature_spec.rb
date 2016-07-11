@@ -1,11 +1,31 @@
 require 'rails_helper'
 
 feature 'restaurants' do
+
   context 'no restaurants have been added' do
     scenario 'should display a prompt to add a restaurant' do
       visit '/restaurants'
       expect(page).to have_content 'No restaurants yet'
-      expect(page).to have_link 'Add a restaurant'
+      expect(page).to have_content 'Add a restaurant'
+    end
+  end
+
+  context 'Users can go to add restaurant page' do
+    scenario 'User clicks link to add a restaurant' do
+      visit '/restaurants'
+      expect(page).to have_content 'No restaurants yet'
+      click_link('Add a restaurant');
+      expect(page.current_path).to eq "/restaurants/new"
+      expect(page).to have_content "Add a new restaurant"
+    end
+  end
+
+  context 'Users can add a restaurant' do
+    scenario 'user fills in form and sumbits' do
+      visit '/restaurants/new'
+      fill_in('name', :with => 'American Diner')
+      fill_in('description', :with => 'Great cheese burgers')
+      click_on('Add Restaurant')
     end
   end
 end
