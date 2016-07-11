@@ -1,15 +1,24 @@
-``````````
-README
+# README
 
-User Stories
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Visitors can create new restaurants using a form, specifying a name and description
+Things you may want to cover:
 
-Restaurants can be edited and deleted
+* Ruby version
 
-Visitors can leave reviews for restaurants, providing a numerical score (1-5) and a comment about their experience
+* System dependencies
 
-The restaurants listings page should display all the reviews, along with the average rating of each restaurant
+* Configuration
 
-Validations should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional)
-`````````
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
