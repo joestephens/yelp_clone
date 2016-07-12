@@ -20,8 +20,9 @@ feature 'restaurants' do
     end
     scenario 'user fills in form and sumbits' do
       visit '/restaurants/new'
-      fill_in('name', :with => 'American Diner')
-      fill_in('description', :with => 'Great cheese burgers')
-      click_on('Add Restaurant')
+      fill_in('Name', :with => 'American Diner')
+      fill_in('Description', :with => 'Great cheese burgers')
+      click_button('Create Restaurant')
     end
   end
+end

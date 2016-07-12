@@ -1,9 +1,22 @@
 class RestaurantsController < ApplicationController
 
-def index
-end
+  def index
+    @restaurants = Restaurant.all
+  end
 
-def new
-end
+  def new
+    @restaurant = Restaurant.new
+  end
+
+  def create
+    Restaurant.create(restaurant_params)
+    redirect_to '/restaurants'
+  end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :description)
+  end
 
 end
