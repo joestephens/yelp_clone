@@ -25,3 +25,4 @@ feature 'restaurants' do
       click_on('Add Restaurant')
     end
   end
+end
