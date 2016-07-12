@@ -1,0 +1,7 @@
+- if @restaurants.any?
+  - @restaurants.each do |restaurant|
+    p = link_to restaurant.name, restaurant_path(restaurant)
+- else
+  p No restaurants yet
+
+= link_to 'Add a restaurant', [:new_restaurant, @restaurant]
