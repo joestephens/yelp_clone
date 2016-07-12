@@ -1,4 +1,4 @@
-/log/*
+≤/log/*
 !/log/.keep
 /tmp
 /.env

@@ -14,7 +14,7 @@ feature 'restaurants' do
     scenario 'User clicks link to add a restaurant' do
       visit '/restaurants'
       expect(page).to have_content 'No restaurants yet'
-      click_link('Add a restaurant');
+      click_link('Add a restaurant')
       expect(page.current_path).to eq "/restaurants/new"
       expect(page).to have_content "Add a new restaurant"
     end
