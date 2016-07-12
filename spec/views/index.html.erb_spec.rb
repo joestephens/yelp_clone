@@ -1,7 +1,7 @@
 describe 'restaurants/index.html.erb' do
   context 'when restaurants exist' do
     it 'displays the restaurant' do
-      assign(:restaurants, [Restaurant.new(name: 'KFC')])
+      assign(:restaurants, [Restaurant.create(name: 'KFC')])
 
       render
 

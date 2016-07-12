@@ -1,0 +1,4 @@
+<h2><%= @restaurant.name %></h2>
+<%= @restaurant.description %>
+<p><%= link_to 'Edit Restaurant', [:edit_restaurant] %></p>
+<p><%= link_to "Delete Restaurant", restaurant_path(@restaurant), method: :delete %></p>

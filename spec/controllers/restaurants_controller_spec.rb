@@ -5,8 +5,8 @@ describe RestaurantsController, type: :controller do
     context 'when form is submitted' do
       it 'redirects to /restaurants' do
         # restaurant = Restaurant.new
-        post :create, 'restaurant' => {"name"=>"joe", "description"=>"pizza"}
-        response.should redirect_to('/restaurants')
+        post :create, params: {'restaurant' => {"name"=>"joe", "description"=>"pizza"}}
+        expect(response).to redirect_to('/restaurants')
       end
     end
 
