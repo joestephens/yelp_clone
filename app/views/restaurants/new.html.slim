@@ -1,4 +1,16 @@
+css: .field_with_errors { border: 1px solid red; }
+
+- if @restaurant.errors.any?
+  section id="errors"
+    h2 = pluralize @restaurant.errors.count, "error"
+    | prohibited this restaurant from being saved
+    ul
+      - @restaurant.errors.full_messages.each do |message|
+      li: #{message}
+
 = form_for @restaurant do |f|
   = f.label :name
   = f.text_field :name
+  = f.label :description
+  = f.text_field :description
   = f.submit
