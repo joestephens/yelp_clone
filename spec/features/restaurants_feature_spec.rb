@@ -6,7 +6,7 @@ feature 'restaurants' do
       test_sign_up
       visit '/restaurants'
       expect(page).to have_content 'No restaurants yet'
-      expect(page).to have_link 'Add a restaurant'
+      expect(page).to have_button 'Add a Restaurant'
     end
 
     scenario 'doesn\'t have \'Add a restaurant\' link if not logged in' do
@@ -40,7 +40,7 @@ feature 'restaurants' do
       it 'does not let you submit a name that is too short' do
         test_sign_up
         visit '/restaurants'
-        click_link 'Add a restaurant'
+        click_button 'Add a Restaurant'
         fill_in 'Name', with: 'kf'
         click_button 'Create Restaurant'
         expect(page).not_to have_css 'h2', text: 'kf'
@@ -90,7 +90,7 @@ feature 'restaurants' do
     before do
       test_sign_up
       visit '/restaurants'
-      click_link 'Add a restaurant'
+      click_button 'Add a Restaurant'
       fill_in 'Name', with: 'KFC'
       fill_in 'Description', with: 'Deep fried goodness'
       click_button 'Create Restaurant'
@@ -108,7 +108,7 @@ feature 'restaurants' do
     scenario 'user can\'t edit or delete restaurant' do
       test_sign_up
       visit '/restaurants'
-      click_link 'Add a restaurant'
+      click_button 'Add a Restaurant'
       fill_in 'Name', with: 'KFC'
       fill_in 'Description', with: 'Deep fried goodness'
       click_button 'Create Restaurant'

@@ -8,9 +8,13 @@ css: .field_with_errors { border: 1px solid red; }
       - @restaurant.errors.full_messages.each do |message|
       li: #{message}
 
+h2 Add a Restaurant
 = form_for @restaurant do |f|
-  = f.label :name
-  = f.text_field :name
-  = f.label :description
-  = f.text_field :description
-  = f.submit
+  p
+    = f.label :name
+    = f.text_field :name
+  p
+    = f.label :description
+    = f.text_field :description
+  p
+    = f.submit

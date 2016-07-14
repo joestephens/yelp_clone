@@ -1,0 +1,78 @@
+body {
+  font-family: Helvetica Neue;
+  background-color: #393D3F;
+  color: #FDFDFF;
+  margin: 0;
+}
+
+#header {
+  background-color: #C6C5B9;
+  padding: 20px;
+  color: #393D3F;
+}
+
+#header a, .add a {
+  color: #393D3F;
+}
+
+.add a:hover {
+  cursor: default;
+}
+
+#header h1 a {
+  text-decoration: none;
+}
+
+#content {
+  padding: 20px;
+}
+
+.add, input[type=submit] {
+  background-color: #C6C5B9;
+  padding: 10px;
+  color: #393D3F;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+}
+
+input, select, textarea {
+  border: 0;
+  padding: 10px;
+  font-size: 1em;
+  outline: none;
+  display: block;
+  margin-top: 5px;
+}
+
+a {
+  color: #FDFDFF;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p a {
+  color: #62929E;
+}
+
+h2 a, p a {
+  text-decoration: none;
+}
+
+h2 a:hover, p a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0;
+}
+
+.notice, .alert {
+  background-color: #C6C5B9;
+  color: #393D3F;
+  padding: 10px;
+}

@@ -13,7 +13,7 @@ end
 
 def create_restaurant
   visit '/restaurants'
-  click_link 'Add a restaurant'
+  click_button 'Add a Restaurant'
   fill_in 'Name', with: 'KFC'
   fill_in 'Description', with: 'Chicken'
   click_button 'Create Restaurant'
